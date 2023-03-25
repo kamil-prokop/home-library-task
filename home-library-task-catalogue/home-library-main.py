@@ -39,12 +39,6 @@ cursor.execute(sql_library)
 connection.commit()
 
 #inserting data into tables
-#connection = sqlite3.connect(db_file)
-#connection.execute('''PRAGMA foreign_keys=ON''')
-
-#cursor = connection.cursor()
-
-#cursor.execute('''PRAGMA foreign_keys=ON''')
 
 cursor.execute('''INSERT OR IGNORE INTO table_books (book_title) VALUES ("Propaganda")''')
 cursor.execute('''INSERT OR IGNORE INTO table_books (book_title) VALUES ("Inżynieria finansowa")''')
@@ -57,6 +51,7 @@ connection.commit()
 cursor.execute('''INSERT OR IGNORE INTO table_authors (name) VALUES ("Edward Bernays")''')
 cursor.execute('''INSERT OR IGNORE INTO table_authors (name) VALUES ("Rafał Weron")''')
 cursor.execute('''INSERT OR IGNORE INTO table_authors (name) VALUES ("Alistair MacLean")''')
+
 connection.commit()
 
 
@@ -64,7 +59,6 @@ cursor.execute('''INSERT OR IGNORE INTO table_library (books_title, authors_name
 cursor.execute('''INSERT OR IGNORE INTO table_library (books_title, authors_name, availability) VALUES ("Inżynieria finansowa", "Rafał Weron", "YES")''')
 cursor.execute('''INSERT OR IGNORE INTO table_library (books_title, authors_name, availability) VALUES ("Działa Nawarony", "Alistair MacLean", "NO")''')
 cursor.execute('''INSERT OR IGNORE INTO table_library (books_title, authors_name, availability) VALUES ("Tylko dla orłów", "Alistair MacLean", "YES")''')
-
 
 connection.commit()
 
